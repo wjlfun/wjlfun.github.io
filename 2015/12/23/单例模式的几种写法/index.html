@@ -94,7 +94,7 @@
 
 
 
-  <meta name="keywords" content="浏览器插件," />
+  <meta name="keywords" content="单例模式," />
 
 
 
@@ -107,32 +107,18 @@
 
 
 
-<meta name="description" content="浏览器插件的使用教程安装油猴插架 [下载安装][http://www.tampermonkey.net] 选择和你浏览器对应的插架，如下图   安装成功后可以在浏览器插件（扩展）中看到油猴，如下图    使用油猴安装插件 点击油猴图标可以打开油猴的控制面板，如下图    点击[获取新脚本][http://tampermonkey.net/scripts.php] 选择脚本网站，推荐使用Greas">
-<meta name="keywords" content="浏览器插件">
+<meta name="description" content="单例模式是一种很基础的设计模式，在面试时可能会被要求手写不同类型的单例模式代码，主要有三种模式：1、饿汉模式：[java] view plain copy  print?    //饿汉模式，很饿很着急，所以类加载时即创建实例对象   public class Singleton1 {              private static Singleton1 singleton = new">
+<meta name="keywords" content="单例模式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="浏览器插件的使用教程">
-<meta property="og:url" content="http://wjlfun.info/2015/09/23/浏览器插件的使用教程/index.html">
+<meta property="og:title" content="单例模式的几种写法">
+<meta property="og:url" content="http://wjlfun.info/2015/12/23/单例模式的几种写法/index.html">
 <meta property="og:site_name" content="wjlfun.info">
-<meta property="og:description" content="浏览器插件的使用教程安装油猴插架 [下载安装][http://www.tampermonkey.net] 选择和你浏览器对应的插架，如下图   安装成功后可以在浏览器插件（扩展）中看到油猴，如下图    使用油猴安装插件 点击油猴图标可以打开油猴的控制面板，如下图    点击[获取新脚本][http://tampermonkey.net/scripts.php] 选择脚本网站，推荐使用Greas">
+<meta property="og:description" content="单例模式是一种很基础的设计模式，在面试时可能会被要求手写不同类型的单例模式代码，主要有三种模式：1、饿汉模式：[java] view plain copy  print?    //饿汉模式，很饿很着急，所以类加载时即创建实例对象   public class Singleton1 {              private static Singleton1 singleton = new">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://os4z8t7lb.bkt.clouddn.com/201709031141_995.png">
-<meta property="og:image" content="http://os4z8t7lb.bkt.clouddn.com/201709031143_316.png">
-<meta property="og:image" content="http://os4z8t7lb.bkt.clouddn.com/201709031145_947.png">
-<meta property="og:image" content="http://os4z8t7lb.bkt.clouddn.com/201709031147_863.png">
-<meta property="og:image" content="http://os4z8t7lb.bkt.clouddn.com/201709031149_210.png">
-<meta property="og:image" content="http://os4z8t7lb.bkt.clouddn.com/201709031150_460.png">
-<meta property="og:image" content="http://os4z8t7lb.bkt.clouddn.com/201709031152_320.png">
-<meta property="og:image" content="http://os4z8t7lb.bkt.clouddn.com/201709031938_626.png">
-<meta property="og:image" content="http://os4z8t7lb.bkt.clouddn.com/201709031527_545.png">
-<meta property="og:image" content="http://os4z8t7lb.bkt.clouddn.com/201709031529_999.png">
-<meta property="og:image" content="http://os4z8t7lb.bkt.clouddn.com/201709032010_638.png">
-<meta property="og:image" content="http://os4z8t7lb.bkt.clouddn.com/201709032016_912.png">
-<meta property="og:image" content="http://os4z8t7lb.bkt.clouddn.com/201709032020_721.png">
-<meta property="og:updated_time" content="2018-01-28T13:28:26.012Z">
+<meta property="og:updated_time" content="2018-05-15T09:20:29.554Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="浏览器插件的使用教程">
-<meta name="twitter:description" content="浏览器插件的使用教程安装油猴插架 [下载安装][http://www.tampermonkey.net] 选择和你浏览器对应的插架，如下图   安装成功后可以在浏览器插件（扩展）中看到油猴，如下图    使用油猴安装插件 点击油猴图标可以打开油猴的控制面板，如下图    点击[获取新脚本][http://tampermonkey.net/scripts.php] 选择脚本网站，推荐使用Greas">
-<meta name="twitter:image" content="http://os4z8t7lb.bkt.clouddn.com/201709031141_995.png">
+<meta name="twitter:title" content="单例模式的几种写法">
+<meta name="twitter:description" content="单例模式是一种很基础的设计模式，在面试时可能会被要求手写不同类型的单例模式代码，主要有三种模式：1、饿汉模式：[java] view plain copy  print?    //饿汉模式，很饿很着急，所以类加载时即创建实例对象   public class Singleton1 {              private static Singleton1 singleton = new">
 
 
 
@@ -162,7 +148,7 @@
 
 
 
-  <link rel="canonical" href="http://wjlfun.info/2015/09/23/浏览器插件的使用教程/"/>
+  <link rel="canonical" href="http://wjlfun.info/2015/12/23/单例模式的几种写法/"/>
 
 
 ﻿
@@ -178,7 +164,7 @@
 daovoice('update');
   </script>
 
-  <title>浏览器插件的使用教程 | wjlfun.info</title>
+  <title>单例模式的几种写法 | wjlfun.info</title>
   
 
 
@@ -317,7 +303,7 @@ daovoice('update');
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wjlfun.info/2015/09/23/浏览器插件的使用教程/">
+    <link itemprop="mainEntityOfPage" href="http://wjlfun.info/2015/12/23/单例模式的几种写法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="吴金龙">
@@ -334,7 +320,7 @@ daovoice('update');
 
         
         
-          <h1 class="post-title" itemprop="name headline">浏览器插件的使用教程</h1>
+          <h1 class="post-title" itemprop="name headline">单例模式的几种写法</h1>
         
 
         <div class="post-meta">
@@ -346,8 +332,8 @@ daovoice('update');
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-09-23T00:00:00+08:00">
-                2015-09-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-12-23T00:00:00+08:00">
+                2015-12-23
               </time>
             
 
@@ -369,8 +355,8 @@ daovoice('update');
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Life/" itemprop="url" rel="index">
-                    <span itemprop="name">Life</span>
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
                   </a>
                 </span>
 
@@ -405,7 +391,7 @@ daovoice('update');
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  266
+                  747
                 </span>
               
 
@@ -421,7 +407,7 @@ daovoice('update');
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  3
                 </span>
               
             </div>
@@ -442,32 +428,144 @@ daovoice('update');
       
 
       
-        <script src="\assets\js\APlayer.min.js"> </script><h1 id="浏览器插件的使用教程"><a href="#浏览器插件的使用教程" class="headerlink" title="浏览器插件的使用教程"></a>浏览器插件的使用教程</h1><h2 id="安装油猴插架"><a href="#安装油猴插架" class="headerlink" title="安装油猴插架"></a>安装油猴插架</h2><ul>
-<li>[下载安装][<a href="http://www.tampermonkey.net" target="_blank" rel="noopener">http://www.tampermonkey.net</a>]</li>
-<li>选择和你浏览器对应的插架，如下图<br>  <img src="http://os4z8t7lb.bkt.clouddn.com/201709031141_995.png" alt=""></li>
-<li>安装成功后可以在浏览器插件（扩展）中看到油猴，如下图<br>  <img src="http://os4z8t7lb.bkt.clouddn.com/201709031143_316.png" alt=""></li>
-</ul>
-<h2 id="使用油猴安装插件"><a href="#使用油猴安装插件" class="headerlink" title="使用油猴安装插件"></a>使用油猴安装插件</h2><ul>
-<li>点击油猴图标可以打开油猴的控制面板，如下图<br>   <img src="http://os4z8t7lb.bkt.clouddn.com/201709031145_947.png" alt=""></li>
-<li>点击[获取新脚本][<a href="http://tampermonkey.net/scripts.php" target="_blank" rel="noopener">http://tampermonkey.net/scripts.php</a>]</li>
-<li>选择脚本网站，推荐使用<a href="https://greasyfork.org/zh-CN" target="_blank" rel="noopener">GreasyFork</a><br>  <img src="http://os4z8t7lb.bkt.clouddn.com/201709031147_863.png" alt=""></li>
-</ul>
-<h2 id="选择要安装的脚本"><a href="#选择要安装的脚本" class="headerlink" title="选择要安装的脚本"></a>选择要安装的脚本</h2><ul>
-<li>在首页点击脚本列表<br>   <img src="http://os4z8t7lb.bkt.clouddn.com/201709031149_210.png" alt=""></li>
-<li>选择你需要的脚本点击安装<br>  <img src="http://os4z8t7lb.bkt.clouddn.com/201709031150_460.png" alt=""></li>
-<li>点击进行安装，如下图<br>  <img src="http://os4z8t7lb.bkt.clouddn.com/201709031152_320.png" alt=""><br>  <img src="http://os4z8t7lb.bkt.clouddn.com/201709031938_626.png" alt=""></li>
-<li>安装成功后可以在油猴面板查看<br>  <img src="http://os4z8t7lb.bkt.clouddn.com/201709031527_545.png" alt=""><br>  <img src="http://os4z8t7lb.bkt.clouddn.com/201709031529_999.png" alt=""><blockquote>
-<p>插件可根据自己的需求安装，在脚本列表中可以看到很多有意思的插件</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="举例：查看VIP视频"><a href="#举例：查看VIP视频" class="headerlink" title="举例：查看VIP视频"></a>举例：查看VIP视频</h2><ol>
-<li>安装<code>VIP视频在线解析</code>插件</li>
-<li>打开视频网站，播放视频，可看到插件，如下图<br> <img src="http://os4z8t7lb.bkt.clouddn.com/201709032010_638.png" alt="优酷网站"><br> <img src="http://os4z8t7lb.bkt.clouddn.com/201709032016_912.png" alt="爱奇艺"><br> <img src="http://os4z8t7lb.bkt.clouddn.com/201709032020_721.png" alt="腾讯视频"><blockquote>
-<p>解析VIP 视频的插件很多，选一个可以用的即可，也可以安装多个<br>插件的作用只是</p>
-</blockquote>
-</li>
+        <script src="\assets\js\APlayer.min.js"> </script><div class="htmledit_views"><br><br><span style="font-family:'Microsoft YaHei';font-size:14px;">单例模式是一种很基础的设计模式，在面试时可能会被要求手写不同类型的单例模式代码，主要有三种模式：</span><br><br><span style="font-family:'Microsoft YaHei';font-size:14px;color:#3333ff;"><strong>1、饿汉模式：</strong></span><br><br><span style="font-family:'Microsoft YaHei';font-size:14px;"></span><br><br><div class="dp-highlighter bg_java"><br><br><div class="bar"><br><br><div class="tools"><strong>[java]</strong> <a href="#" title="view plain">view plain</a> <span data-mod="popu_168"><a href="#" title="copy">copy</a><br><br><div style="position: absolute; left: 171px; top: 412px; width: 16px; height: 16px; z-index: 99;"><embed id="ZeroClipboardMovie_1" src="https://csdnimg.cn/public/highlighter/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="ZeroClipboardMovie_1" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=1&amp;width=16&amp;height=16" wmode="transparent" width="16" height="16" align="middle"></div>
+
+<div style="position: absolute; left: 171px; top: 412px; width: 16px; height: 16px; z-index: 99;"><embed id="ZeroClipboardMovie_4" src="https://csdnimg.cn/public/highlighter/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="ZeroClipboardMovie_4" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=4&amp;width=16&amp;height=16" wmode="transparent" width="16" height="16" align="middle"></div></span><span data-mod="popu_169"><a href="#" title="print">print</a></span><a href="#" title="?">?</a></div>
+
+<p></p></div><p></p>
+<ol>
+<li><span><span class="comment">//饿汉模式，很饿很着急，所以类加载时即创建实例对象</span><span>  </span></span></li>
+<li><span><span class="keyword">public</span><span> </span><span class="keyword">class</span><span> Singleton1 {  </span></span></li>
+<li><span>      </span></li>
+<li><span>    <span class="keyword">private</span><span> </span><span class="keyword">static</span><span> Singleton1 singleton = </span><span class="keyword">new</span><span> Singleton1();  </span></span></li>
+<li><span>      </span></li>
+<li><span>    <span class="keyword">private</span><span> Singleton1(){  </span></span></li>
+<li><span>          </span></li>
+<li><span>    }  </span></li>
+<li><span>      </span></li>
+<li><span>    <span class="keyword">public</span><span> </span><span class="keyword">static</span><span> Singleton1 getInstance(){  </span></span></li>
+<li><span>        <span class="keyword">return</span><span> singleton;  </span></span></li>
+<li><span>    }  </span></li>
+<li><span>}  </span></li>
 </ol>
+<p></p></div><p></p>
+<pre class="java" name="code" style="display: none;">//饿汉模式，很饿很着急，所以类加载时即创建实例对象
+public class Singleton1 {
+
+    private static Singleton1 singleton = new Singleton1();
+
+    private Singleton1(){
+
+    }
+
+    public static Singleton1 getInstance(){
+        return singleton;
+    }
+}</pre>
+
+<p><strong><span style="color:#3333ff;">2、饱汉模式：</span></strong></p>
+<p><span style="font-family:'Microsoft YaHei';font-size:14px;"></span></p>
+<div class="dp-highlighter bg_java"><br><br><div class="bar"><br><br><div class="tools"><strong>[java]</strong> <a href="#" title="view plain">view plain</a> <span data-mod="popu_168"><a href="#" title="copy">copy</a><br><br><div style="position: absolute; left: 171px; top: 735px; width: 16px; height: 16px; z-index: 99;"><embed id="ZeroClipboardMovie_2" src="https://csdnimg.cn/public/highlighter/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="ZeroClipboardMovie_2" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=2&amp;width=16&amp;height=16" wmode="transparent" width="16" height="16" align="middle"></div>
+
+<div style="position: absolute; left: 171px; top: 735px; width: 16px; height: 16px; z-index: 99;"><embed id="ZeroClipboardMovie_5" src="https://csdnimg.cn/public/highlighter/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="ZeroClipboardMovie_5" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=5&amp;width=16&amp;height=16" wmode="transparent" width="16" height="16" align="middle"></div></span><span data-mod="popu_169"><a href="#" title="print">print</a></span><a href="#" title="?">?</a></div>
+
+<p></p></div><p></p>
+<ol>
+<li><span><span class="comment">//饱汉模式，很饱不着急，延迟加载，啥时候用啥时候创建实例，存在线程安全问题</span><span>  </span></span></li>
+<li><span><span class="keyword">public</span><span> </span><span class="keyword">class</span><span> Singleton2 {  </span></span></li>
+<li><span>  </span></li>
+<li><span>    <span class="keyword">private</span><span> </span><span class="keyword">static</span><span> Singleton2 singleton;  </span></span></li>
+<li><span>      </span></li>
+<li><span>    <span class="keyword">private</span><span> Singleton2(){  </span></span></li>
+<li><span>          </span></li>
+<li><span>    }  </span></li>
+<li><span>      </span></li>
+<li><span>    <span class="keyword">public</span><span> </span><span class="keyword">static</span><span> </span><span class="keyword">synchronized</span><span> Singleton2 getInstance(){  </span></span></li>
+<li><span>        <span class="keyword">if</span><span>(singleton == </span><span class="keyword">null</span><span>)   </span></span></li>
+<li><span>            singleton = <span class="keyword">new</span><span> Singleton2();  </span></span></li>
+<li><span>        <span class="keyword">return</span><span> singleton;  </span></span></li>
+<li><span>    }  </span></li>
+<li><span>}  </span></li>
+</ol>
+<p></p></div><p></p>
+<pre class="java" name="code" style="display: none;">//饱汉模式，很饱不着急，延迟加载，啥时候用啥时候创建实例，存在线程安全问题
+public class Singleton2 {
+
+    private static Singleton2 singleton;
+
+    private Singleton2(){
+
+    }
+
+    public static synchronized Singleton2 getInstance(){
+        if(singleton == null) 
+            singleton = new Singleton2();
+        return singleton;
+    }
+}
+</pre>
+
+<p><span style="color:#3333ff;"><strong>3、双重锁模式：</strong></span></p>
+<p><span style="font-family:'Microsoft YaHei';font-size:14px;"></span></p>
+<div class="dp-highlighter bg_java"><br><br><div class="bar"><br><br><div class="tools"><strong>[java]</strong> <a href="#" title="view plain">view plain</a> <span data-mod="popu_168"><a href="#" title="copy">copy</a><br><br><div style="position: absolute; left: 171px; top: 1094px; width: 16px; height: 16px; z-index: 99;"><embed id="ZeroClipboardMovie_3" src="https://csdnimg.cn/public/highlighter/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="ZeroClipboardMovie_3" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=3&amp;width=16&amp;height=16" wmode="transparent" width="16" height="16" align="middle"></div>
+
+<div style="position: absolute; left: 171px; top: 1094px; width: 16px; height: 16px; z-index: 99;"><embed id="ZeroClipboardMovie_6" src="https://csdnimg.cn/public/highlighter/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="ZeroClipboardMovie_6" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=6&amp;width=16&amp;height=16" wmode="transparent" width="16" height="16" align="middle"></div></span><span data-mod="popu_169"><a href="#" title="print">print</a></span><a href="#" title="?">?</a></div>
+
+<p></p></div><p></p>
+<ol>
+<li><span><span class="comment">//饱汉模式的双重锁模式，提高效率</span><span>  </span></span></li>
+<li><span><span class="keyword">public</span><span> </span><span class="keyword">class</span><span> Singleton3 {  </span></span></li>
+<li><span>    <span class="keyword">private</span><span> </span><span class="keyword">static</span><span> Singleton3 singleton;  </span></span></li>
+<li><span>      </span></li>
+<li><span>    <span class="keyword">private</span><span> Singleton3(){  </span></span></li>
+<li><span>          </span></li>
+<li><span>    }  </span></li>
+<li><span>      </span></li>
+<li><span>    <span class="keyword">public</span><span> </span><span class="keyword">static</span><span> Singleton3 getInstance(){  </span></span></li>
+<li><span>        <span class="keyword">if</span><span>(singleton == </span><span class="keyword">null</span><span>){  </span></span></li>
+<li><span>            <span class="keyword">synchronized</span><span>(Singleton3.</span><span class="keyword">class</span><span>){  </span></span></li>
+<li><span>                <span class="keyword">if</span><span>(singleton == </span><span class="keyword">null</span><span>){  </span></span></li>
+<li><span>                    singleton = <span class="keyword">new</span><span> Singleton3();  </span></span></li>
+<li><span>                }  </span></li>
+<li><span>            }  </span></li>
+<li><span>        }  </span></li>
+<li><span>        <span class="keyword">return</span><span> singleton;  </span></span></li>
+<li><span>    }  </span></li>
+<li><span>}  </span></li>
+</ol>
+<p></p></div><p></p>
+<pre class="java" name="code" style="display: none;">//饱汉模式的双重锁模式，提高效率
+public class Singleton3 {
+    private static Singleton3 singleton;
+
+    private Singleton3(){
+
+    }
+
+    public static Singleton3 getInstance(){
+        if(singleton == null){
+            synchronized(Singleton3.class){
+                if(singleton == null){
+                    singleton = new Singleton3();
+                }
+            }
+        }
+        return singleton;
+    }
+}</pre>
+
+<p><strong><span style="color:#3333ff;">几种模式的比较：</span></strong></p>
+<p><span style="font-family:'Microsoft YaHei';font-size:14px;"><strong><span style="color:#009900;">1、饿汉模式</span></strong>是线程安全的，因为实例对象在类加载过程中就会被创建，在getInstance()方法中只是直接返回对象引用。之所以被称为“饿汉”，是因为这种模式创建实例对象比较“急”，真的是饿坏了……</span></p>
+<p><span style="font-family:'Microsoft YaHei';font-size:14px;">好处：简单明了，无需关注线程安全问题。</span></p>
+<p><span style="font-family:'Microsoft YaHei';font-size:14px;">缺点：如果在一个大环境下使用了过多的饿汉单例，则会生产出过多的实例对象，无论你是否要使用他们。</span></p>
+<p><span style="font-family:'Microsoft YaHei';font-size:14px;"><strong><span style="color:#009900;">2、饱汉模式</span></strong>不是线程安全的，因为是在需要的时候才会产生实例对象，生产之前会判断对象引用是否为空，这里，如果多个线程同时进入判断，就会生成多个实例对象，这是不符合单例的思想的。所以饱汉模式为了保证线程安全，就用synchronized关键字标识了方法。之所以被称为“饱汉”，因为它很饱，不急着生产实例，在需要的时候才会生产。</span></p>
+<p><span style="font-family:'Microsoft YaHei';font-size:14px;">好处：延时加载，用的时候才会生产对象。</span></p>
+<p><span style="font-family:'Microsoft YaHei';font-size:14px;">缺点：需要保证同步，付出效率的代价。</span></p>
+<p><span style="font-family:'Microsoft YaHei';font-size:14px;"><strong><span style="color:#009900;">3、双重锁模式</span></strong>，是饱汉模式的优化，进行双重判断，当已经创建过实例对象后就无需加锁，提高效率。也是一种推荐使用的方式。</span></p>
+<p><span style="font-family:'Microsoft YaHei';font-size:14px;"><br></span></p>
+<p><span style="font-family:'Microsoft YaHei';font-size:14px;"></span></p>
+<p></p>
+<p></p></div><p></p>
 
       
     </div>
@@ -494,7 +592,7 @@ daovoice('update');
       
         <div class="post-tags">
           
-            <a href="/tags/浏览器插件/" rel="tag"><i class="fa fa-tag"></i> 浏览器插件</a>
+            <a href="/tags/单例模式/" rel="tag"><i class="fa fa-tag"></i> 单例模式</a>
           
         </div>
       
@@ -507,8 +605,8 @@ daovoice('update');
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/09/21/Linux/" rel="next" title="Linux">
-                <i class="fa fa-chevron-left"></i> Linux
+              <a href="/2015/12/17/struts2/" rel="next" title="Struts2">
+                <i class="fa fa-chevron-left"></i> Struts2
               </a>
             
           </div>
@@ -516,10 +614,6 @@ daovoice('update');
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/12/17/struts2/" rel="prev" title="Struts2">
-                Struts2 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -596,17 +690,8 @@ var jiathis_config={
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -695,26 +780,6 @@ var jiathis_config={
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#浏览器插件的使用教程"><span class="nav-number">1.</span> <span class="nav-text">浏览器插件的使用教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装油猴插架"><span class="nav-number">1.1.</span> <span class="nav-text">安装油猴插架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用油猴安装插件"><span class="nav-number">1.2.</span> <span class="nav-text">使用油猴安装插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择要安装的脚本"><span class="nav-number">1.3.</span> <span class="nav-text">选择要安装的脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#举例：查看VIP视频"><span class="nav-number">1.4.</span> <span class="nav-text">举例：查看VIP视频</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-			 </div>
-	
-	
-	
-      <!--/noindex-->
       
 
       

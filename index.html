@@ -302,6 +302,319 @@ daovoice('update');
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://wjlfun.info/2015/12/23/单例模式的几种写法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="吴金龙">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wjlfun.info">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2015/12/23/单例模式的几种写法/" itemprop="url">单例模式的几种写法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-12-23T00:00:00+08:00">
+                2015-12-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  747
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <script src="\assets\js\APlayer.min.js"> </script><div class="htmledit_views"><br><br><span style="font-family:'Microsoft YaHei';font-size:14px;">单例模式是一种很基础的设计模式，在面试时可能会被要求手写不同类型的单例模式代码，主要有三种模式：</span><br><br><span style="font-family:'Microsoft YaHei';font-size:14px;color:#3333ff;"><strong>1、饿汉模式：</strong></span><br><br><span style="font-family:'Microsoft YaHei';font-size:14px;"></span><br><br><div class="dp-highlighter bg_java"><br><br><div class="bar"><br><br><div class="tools"><strong>[java]</strong> <a href="#" title="view plain">view plain</a> <span data-mod="popu_168"><a href="#" title="copy">copy</a><br><br><div style="position: absolute; left: 171px; top: 412px; width: 16px; height: 16px; z-index: 99;"><embed id="ZeroClipboardMovie_1" src="https://csdnimg.cn/public/highlighter/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="ZeroClipboardMovie_1" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=1&amp;width=16&amp;height=16" wmode="transparent" width="16" height="16" align="middle"></div>
+
+<div style="position: absolute; left: 171px; top: 412px; width: 16px; height: 16px; z-index: 99;"><embed id="ZeroClipboardMovie_4" src="https://csdnimg.cn/public/highlighter/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="ZeroClipboardMovie_4" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=4&amp;width=16&amp;height=16" wmode="transparent" width="16" height="16" align="middle"></div></span><span data-mod="popu_169"><a href="#" title="print">print</a></span><a href="#" title="?">?</a></div>
+
+<p></p></div><p></p>
+<ol>
+<li><span><span class="comment">//饿汉模式，很饿很着急，所以类加载时即创建实例对象</span><span>  </span></span></li>
+<li><span><span class="keyword">public</span><span> </span><span class="keyword">class</span><span> Singleton1 {  </span></span></li>
+<li><span>      </span></li>
+<li><span>    <span class="keyword">private</span><span> </span><span class="keyword">static</span><span> Singleton1 singleton = </span><span class="keyword">new</span><span> Singleton1();  </span></span></li>
+<li><span>      </span></li>
+<li><span>    <span class="keyword">private</span><span> Singleton1(){  </span></span></li>
+<li><span>          </span></li>
+<li><span>    }  </span></li>
+<li><span>      </span></li>
+<li><span>    <span class="keyword">public</span><span> </span><span class="keyword">static</span><span> Singleton1 getInstance(){  </span></span></li>
+<li><span>        <span class="keyword">return</span><span> singleton;  </span></span></li>
+<li><span>    }  </span></li>
+<li><span>}  </span></li>
+</ol>
+<p></p></div><p></p>
+<pre class="java" name="code" style="display: none;">//饿汉模式，很饿很着急，所以类加载时即创建实例对象
+public class Singleton1 {
+
+    private static Singleton1 singleton = new Singleton1();
+
+    private Singleton1(){
+
+    }
+
+    public static Singleton1 getInstance(){
+        return singleton;
+    }
+}</pre>
+
+<p><strong><span style="color:#3333ff;">2、饱汉模式：</span></strong></p>
+<p><span style="font-family:'Microsoft YaHei';font-size:14px;"></span></p>
+<div class="dp-highlighter bg_java"><br><br><div class="bar"><br><br><div class="tools"><strong>[java]</strong> <a href="#" title="view plain">view plain</a> <span data-mod="popu_168"><a href="#" title="copy">copy</a><br><br><div style="position: absolute; left: 171px; top: 735px; width: 16px; height: 16px; z-index: 99;"><embed id="ZeroClipboardMovie_2" src="https://csdnimg.cn/public/highlighter/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="ZeroClipboardMovie_2" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=2&amp;width=16&amp;height=16" wmode="transparent" width="16" height="16" align="middle"></div>
+
+<div style="position: absolute; left: 171px; top: 735px; width: 16px; height: 16px; z-index: 99;"><embed id="ZeroClipboardMovie_5" src="https://csdnimg.cn/public/highlighter/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="ZeroClipboardMovie_5" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=5&amp;width=16&amp;height=16" wmode="transparent" width="16" height="16" align="middle"></div></span><span data-mod="popu_169"><a href="#" title="print">print</a></span><a href="#" title="?">?</a></div>
+
+<p></p></div><p></p>
+<ol>
+<li><span><span class="comment">//饱汉模式，很饱不着急，延迟加载，啥时候用啥时候创建实例，存在线程安全问题</span><span>  </span></span></li>
+<li><span><span class="keyword">public</span><span> </span><span class="keyword">class</span><span> Singleton2 {  </span></span></li>
+<li><span>  </span></li>
+<li><span>    <span class="keyword">private</span><span> </span><span class="keyword">static</span><span> Singleton2 singleton;  </span></span></li>
+<li><span>      </span></li>
+<li><span>    <span class="keyword">private</span><span> Singleton2(){  </span></span></li>
+<li><span>          </span></li>
+<li><span>    }  </span></li>
+<li><span>      </span></li>
+<li><span>    <span class="keyword">public</span><span> </span><span class="keyword">static</span><span> </span><span class="keyword">synchronized</span><span> Singleton2 getInstance(){  </span></span></li>
+<li><span>        <span class="keyword">if</span><span>(singleton == </span><span class="keyword">null</span><span>)   </span></span></li>
+<li><span>            singleton = <span class="keyword">new</span><span> Singleton2();  </span></span></li>
+<li><span>        <span class="keyword">return</span><span> singleton;  </span></span></li>
+<li><span>    }  </span></li>
+<li><span>}  </span></li>
+</ol>
+<p></p></div><p></p>
+<pre class="java" name="code" style="display: none;">//饱汉模式，很饱不着急，延迟加载，啥时候用啥时候创建实例，存在线程安全问题
+public class Singleton2 {
+
+    private static Singleton2 singleton;
+
+    private Singleton2(){
+
+    }
+
+    public static synchronized Singleton2 getInstance(){
+        if(singleton == null) 
+            singleton = new Singleton2();
+        return singleton;
+    }
+}
+</pre>
+
+<p><span style="color:#3333ff;"><strong>3、双重锁模式：</strong></span></p>
+<p><span style="font-family:'Microsoft YaHei';font-size:14px;"></span></p>
+<div class="dp-highlighter bg_java"><br><br><div class="bar"><br><br><div class="tools"><strong>[java]</strong> <a href="#" title="view plain">view plain</a> <span data-mod="popu_168"><a href="#" title="copy">copy</a><br><br><div style="position: absolute; left: 171px; top: 1094px; width: 16px; height: 16px; z-index: 99;"><embed id="ZeroClipboardMovie_3" src="https://csdnimg.cn/public/highlighter/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="ZeroClipboardMovie_3" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=3&amp;width=16&amp;height=16" wmode="transparent" width="16" height="16" align="middle"></div>
+
+<div style="position: absolute; left: 171px; top: 1094px; width: 16px; height: 16px; z-index: 99;"><embed id="ZeroClipboardMovie_6" src="https://csdnimg.cn/public/highlighter/ZeroClipboard.swf" loop="false" menu="false" quality="best" bgcolor="#ffffff" name="ZeroClipboardMovie_6" allowscriptaccess="always" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="id=6&amp;width=16&amp;height=16" wmode="transparent" width="16" height="16" align="middle"></div></span><span data-mod="popu_169"><a href="#" title="print">print</a></span><a href="#" title="?">?</a></div>
+
+<p></p></div><p></p>
+<ol>
+<li><span><span class="comment">//饱汉模式的双重锁模式，提高效率</span><span>  </span></span></li>
+<li><span><span class="keyword">public</span><span> </span><span class="keyword">class</span><span> Singleton3 {  </span></span></li>
+<li><span>    <span class="keyword">private</span><span> </span><span class="keyword">static</span><span> Singleton3 singleton;  </span></span></li>
+<li><span>      </span></li>
+<li><span>    <span class="keyword">private</span><span> Singleton3(){  </span></span></li>
+<li><span>          </span></li>
+<li><span>    }  </span></li>
+<li><span>      </span></li>
+<li><span>    <span class="keyword">public</span><span> </span><span class="keyword">static</span><span> Singleton3 getInstance(){  </span></span></li>
+<li><span>        <span class="keyword">if</span><span>(singleton == </span><span class="keyword">null</span><span>){  </span></span></li>
+<li><span>            <span class="keyword">synchronized</span><span>(Singleton3.</span><span class="keyword">class</span><span>){  </span></span></li>
+<li><span>                <span class="keyword">if</span><span>(singleton == </span><span class="keyword">null</span><span>){  </span></span></li>
+<li><span>                    singleton = <span class="keyword">new</span><span> Singleton3();  </span></span></li>
+<li><span>                }  </span></li>
+<li><span>            }  </span></li>
+<li><span>        }  </span></li>
+<li><span>        <span class="keyword">return</span><span> singleton;  </span></span></li>
+<li><span>    }  </span></li>
+<li><span>}  </span></li>
+</ol>
+<p></p></div><p></p>
+<pre class="java" name="code" style="display: none;">//饱汉模式的双重锁模式，提高效率
+public class Singleton3 {
+    private static Singleton3 singleton;
+
+    private Singleton3(){
+
+    }
+
+    public static Singleton3 getInstance(){
+        if(singleton == null){
+            synchronized(Singleton3.class){
+                if(singleton == null){
+                    singleton = new Singleton3();
+                }
+            }
+        }
+        return singleton;
+    }
+}</pre>
+
+<p><strong><span style="color:#3333ff;">几种模式的比较：</span></strong></p>
+<p><span style="font-family:'Microsoft YaHei';font-size:14px;"><strong><span style="color:#009900;">1、饿汉模式</span></strong>是线程安全的，因为实例对象在类加载过程中就会被创建，在getInstance()方法中只是直接返回对象引用。之所以被称为“饿汉”，是因为这种模式创建实例对象比较“急”，真的是饿坏了……</span></p>
+<p><span style="font-family:'Microsoft YaHei';font-size:14px;">好处：简单明了，无需关注线程安全问题。</span></p>
+<p><span style="font-family:'Microsoft YaHei';font-size:14px;">缺点：如果在一个大环境下使用了过多的饿汉单例，则会生产出过多的实例对象，无论你是否要使用他们。</span></p>
+<p><span style="font-family:'Microsoft YaHei';font-size:14px;"><strong><span style="color:#009900;">2、饱汉模式</span></strong>不是线程安全的，因为是在需要的时候才会产生实例对象，生产之前会判断对象引用是否为空，这里，如果多个线程同时进入判断，就会生成多个实例对象，这是不符合单例的思想的。所以饱汉模式为了保证线程安全，就用synchronized关键字标识了方法。之所以被称为“饱汉”，因为它很饱，不急着生产实例，在需要的时候才会生产。</span></p>
+<p><span style="font-family:'Microsoft YaHei';font-size:14px;">好处：延时加载，用的时候才会生产对象。</span></p>
+<p><span style="font-family:'Microsoft YaHei';font-size:14px;">缺点：需要保证同步，付出效率的代价。</span></p>
+<p><span style="font-family:'Microsoft YaHei';font-size:14px;"><strong><span style="color:#009900;">3、双重锁模式</span></strong>，是饱汉模式的优化，进行双重判断，当已经创建过实例对象后就无需加锁，提高效率。也是一种推荐使用的方式。</span></p>
+<p><span style="font-family:'Microsoft YaHei';font-size:14px;"><br></span></p>
+<p><span style="font-family:'Microsoft YaHei';font-size:14px;"></span></p>
+<p></p>
+<p></p></div><p></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+	
+	<div>
+  
+	</div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://wjlfun.info/2015/12/17/struts2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -972,7 +1285,7 @@ daovoice('update');
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -994,7 +1307,7 @@ daovoice('update');
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1087,7 +1400,7 @@ daovoice('update');
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共5.1k字</span>
+  <span class="post-count">博客全站共5.8k字</span>
 </div>
 
         
