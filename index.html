@@ -302,6 +302,181 @@ daovoice('update');
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://wjlfun.info/2016/04/07/shiro原理及其运行流程介绍/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="吴金龙">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wjlfun.info">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/04/07/shiro原理及其运行流程介绍/" itemprop="url">shiro原理及其运行流程介绍</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-07T00:00:00+08:00">
+                2016-04-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  782
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <script src="\assets\js\APlayer.min.js"> </script><div id="article_content" class="article_content csdn-tracking-statistics" data-pid="blog" data-mod="popu_307" data-dsm="post"><br>                    <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/htmledit_views-0a60691e80.css"><br>            <div class="htmledit_views"><br><br><h2><a name="t0"></a><span style="font-size:14px;">什么是shiro</span></h2><br><p><span style="font-size:14px;">&nbsp;</span></p><br><p><span style="font-size:14px;">shiro是apache的一个开源框架，是一个权限管理的框架，实现 用户认证、用户授权。</span></p><br><p><span style="font-size:14px;">&nbsp;</span></p><br><p><span style="font-size:14px;">spring中有spring security (原名Acegi)，是一个权限框架，它和spring依赖过于紧密，没有shiro使用简单。</span></p><br><p><span style="font-size:14px;">shiro不依赖于spring，shiro不仅可以实现 web应用的权限管理，还可以实现c/s系统，分布式系统权限管理，shiro属于轻量框架，越来越多企业项目开始使用shiro。</span></p><br><p><span style="font-size:14px;">&nbsp;</span></p><br><p><span style="font-size:14px;">使用shiro实现系统的权限管理，有效提高开发效率，从而降低开发成本。</span></p><br><p><span style="font-size:14px;"><br></span></p><br><p></p><br><h2><a name="t1"></a><span style="font-size:14px;">&nbsp;shiro架构</span></h2><br><p></p><br><p><span style="font-size:14px;">&nbsp;</span></p><br><p><span style="font-size:14px;">&nbsp;<img src="https://img-blog.csdn.net/20170312125335529?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWluZV9zb25n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt=""></span></p><br><p><span style="font-size:14px;">&nbsp;</span></p><br><p><span style="font-size:14px;">subject：主体，可以是用户也可以是程序，主体要访问系统，系统需要对主体进行认证、授权。</span></p><br><p><span style="font-size:14px;">&nbsp;</span></p><br><p><span style="font-size:14px;">securityManager：安全管理器，主体进行认证和授权都是通过securityManager进行。</span></p><br><p><span style="font-size:14px;">&nbsp;</span></p><br><p><span style="font-size:14px;">authenticator：认证器，主体进行认证最终通过authenticator进行的。</span></p><br><p><span style="font-size:14px;">&nbsp;</span></p><br><p><span style="font-size:14px;">authorizer：授权器，主体进行授权最终通过authorizer进行的。</span></p><br><p><span style="font-size:14px;">&nbsp;</span></p><br><p><span style="font-size:14px;">sessionManager：web应用中一般是用web容器对session进行管理，shiro也提供一套session管理的方式。</span></p><br><p><span style="font-size:14px;">SessionDao：&nbsp; 通过SessionDao管理session数据，针对个性化的session数据存储需要使用sessionDao。</span></p><br><p><span style="font-size:14px;">&nbsp;</span></p><br><p><span style="font-size:14px;">cache Manager：缓存管理器，主要对session和授权数据进行缓存，比如将授权数据通过cacheManager进行缓存管理，和ehcache整合对缓存数据进行管理。</span></p><br><p><span style="font-size:14px;">&nbsp;</span></p><br><p><span style="font-size:14px;">realm：域，领域，相当于数据源，通过realm存取认证、授权相关数据。</span></p><br><p><span style="font-size:14px;">&nbsp;</span></p><br><p><span style="font-size:14px;"><strong>注意：在realm中存储授权和认证的逻辑。</strong></span></p><br><p><span style="font-size:14px;">&nbsp;</span></p><br><p><span style="font-size:14px;">cryptography：密码管理，提供了一套加密/解密的组件，方便开发。比如提供常用的散列、加/解密等功能。</span></p><br><p><span style="font-size:14px;">比如 md5散列算法。</span></p><br><p><span style="font-size:14px;"><strong>认证过程</strong><br></span></p><br><span style="font-size:14px;"><img src="https://img-blog.csdn.net/20170312125241625?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWluZV9zb25n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="" width="577" height="488"><br></span><br><p></p><br><p></p><br><p></p><br><h3><a name="t2"></a><span style="font-size:14px;">&nbsp; 认证执行流程</span></h3><br><p></p><br><p><span style="font-size:14px;">1、通过ini配置文件创建securityManager</span></p><br><p><span style="font-size:14px;">2、调用subject.login方法主体提交认证，提交的token</span></p><br><p><span style="font-size:14px;">3、securityManager进行认证，securityManager最终由ModularRealmAuthenticator进行认证。</span></p><br><p><span style="font-size:14px;">4、ModularRealmAuthenticator调用IniRealm(给realm传入token) 去ini配置文件中查询用户信息</span></p><br><p><span style="font-size:14px;">5、IniRealm根据输入的token（<span style="color:#000000;background:#C0C0C0;">UsernamePasswordToken</span>）从 shiro.ini查询用户信息，根据账号查询用户信息（账号和密码）</span></p><br><p><span style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 如果查询到用户信息，就给ModularRealmAuthenticator返回用户信息（账号和密码）</span></p><br><p><span style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 如果查询不到，就给ModularRealmAuthenticator返回null</span></p><br><p><span style="font-size:14px;">6、ModularRealmAuthenticator接收IniRealm返回Authentication认证信息</span></p><br><p><span style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 如果返回的认证信息是null，ModularRealmAuthenticator抛出异常（<u><span style="color:#000080;">org.apache.shiro.authc.UnknownAccountException</span></u>）</span></p><br><span style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 如果返回的认证信息不是null（说明inirealm找到了用户），对IniRealm返回用户密码 （在ini文件中存在）</span><br><p><span style="font-size:14px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 和 token中的密码 进行对比，如果不一致抛出异常（<u><span style="color:#000080;">org.apache.shiro.authc.IncorrectCredentialsException</span></u>）</span></p><br><p><span style="font-size:14px;"><strong>授权流程</strong></span></p><br><p><span style="font-size:14px;"><strong><img src="https://img-blog.csdn.net/20170312142941667?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbWluZV9zb25n/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="" width="460" height="481"><br></strong></span></p><br><p><span style="font-size:14px;"><strong></strong></span></p><br><h2><a name="t3"></a><strong><span style="font-family:'宋体';">授权流程</span></strong></h2><br><p></p><br><p><span style="font-size:14px;"><strong></strong></span></p><br><p>&nbsp;</p><br><p>1<span style="font-family:'宋体';">、对</span><span style="font-family:Calibri;">subject</span><span style="font-family:'宋体';">进行授权，调用方法</span>isPermitted<span style="font-family:'宋体';">（</span>“permission<span style="font-family:'宋体';">串</span><span style="font-family:Calibri;">“</span><span style="font-family:'宋体';">）</span></p><br><p>2<span style="font-family:'宋体';">、</span><span style="font-family:Calibri;">SecurityManager</span><span style="font-family:'宋体';">执行授权，通过</span>ModularRealmAuthorizer<span style="font-family:'宋体';">执行授权</span></p><br><p>3<span style="font-family:'宋体';">、</span>ModularRealmAuthorizer<span style="font-family:'宋体';">执行</span>realm<span style="font-family:'宋体';">（自定义的</span><span style="font-family:Calibri;">Realm</span><span style="font-family:'宋体';">）从数据库查询权限数据</span></p><br><p><span style="font-family:'宋体';">调用</span>realm<span style="font-family:'宋体';">的授权方法：</span><span style="color:#000000;background:rgb(192,192,192);">doGetAuthorizationInfo</span></p><br><p>&nbsp;</p><br><p>4<span style="font-family:'宋体';">、</span><span style="font-family:Calibri;">realm</span><span style="font-family:'宋体';">从数据库查询权限数据，返回</span>ModularRealmAuthorizer</p><br><p>5<span style="font-family:'宋体';">、</span>ModularRealmAuthorizer<span style="font-family:'宋体';">调用</span>PermissionResolver<span style="font-family:'宋体';">进行权限串比对</span></p><br><p>6<span style="font-family:'宋体';">、如果比对后，</span>isPermitted<span style="font-family:'宋体';">中</span>“permission<span style="font-family:'宋体';">串</span><span style="font-family:Calibri;">“</span><span style="font-family:'宋体';">在</span><span style="font-family:Calibri;">realm</span><span style="font-family:'宋体';">查询到权限数据中，说明用户访问</span><span style="font-family:Calibri;">permission</span><span style="font-family:'宋体';">串有权限，否则<br> 没有权限，抛出异常。</span></p><br><p><span style="font-size:14px;"><br></span></p><br>            </div><br>                </div>
+          
+        
+      
+    </div>
+    
+    
+    
+	
+	<div>
+  
+	</div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://wjlfun.info/2016/01/20/Restful风格的springMVC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1322,7 +1497,7 @@ daovoice('update');
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1344,7 +1519,7 @@ daovoice('update');
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1437,7 +1612,7 @@ daovoice('update');
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共8.1k字</span>
+  <span class="post-count">博客全站共8.8k字</span>
 </div>
 
         
