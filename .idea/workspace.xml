@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4daad1db-f432-4584-a40e-e9a4e35d5d0a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/search.xml" beforeDir="false" afterPath="$PROJECT_DIR$/search.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +14,9 @@
     <session id="-2065720567">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -55,46 +56,24 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/search.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+            <state relative-caret-position="200">
+              <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="10" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="775">
-              <caret line="282" column="24" selection-start-line="282" selection-start-column="24" selection-end-line="282" selection-end-column="24" />
+            <state relative-caret-position="330">
+              <caret line="1111" column="34" lean-forward="true" selection-start-line="1111" selection-start-column="34" selection-end-line="1111" selection-end-column="34" />
               <folding>
                 <element signature="n#style#0;n#svg#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#path#1;n#svg#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#84411#84418#0" expanded="true" />
-                <element signature="e#98910#98917#0" expanded="true" />
-                <element signature="e#107434#107441#0" expanded="true" />
-                <element signature="e#112470#112474#0" expanded="true" />
-                <element signature="e#112477#112481#0" expanded="true" />
-                <element signature="e#119381#119385#1" expanded="true" />
-                <element signature="e#119415#119419#0" expanded="true" />
-                <element signature="e#119419#119423#0" expanded="true" />
-                <element signature="e#119508#119512#0" expanded="true" />
-                <element signature="e#119604#119608#0" expanded="true" />
-                <element signature="e#119608#119612#0" expanded="true" />
-                <element signature="e#119691#119695#0" expanded="true" />
-                <element signature="e#120578#120583#0" expanded="true" />
-                <element signature="e#120583#120588#0" expanded="true" />
-                <element signature="e#120621#120626#0" expanded="true" />
-                <element signature="e#120626#120631#0" expanded="true" />
-                <element signature="e#120694#120699#0" expanded="true" />
-                <element signature="e#120699#120704#0" expanded="true" />
-                <element signature="e#120814#120819#0" expanded="true" />
-                <element signature="e#120819#120824#0" expanded="true" />
-                <element signature="e#130748#130754#0" expanded="true" />
-                <element signature="e#130760#130767#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -111,6 +90,7 @@
     <findStrings>
       <find>wjlfun.info</find>
       <find>云飞扬的个人博客</find>
+      <find>163</find>
     </findStrings>
     <replaceStrings>
       <replace>www.wjlfun.info</replace>
@@ -155,8 +135,8 @@
         <option value="$PROJECT_DIR$/tag-sitemap.xml" />
         <option value="$PROJECT_DIR$/2015/09/21/Linux/index.html" />
         <option value="$PROJECT_DIR$/sitemap.xml" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/search.xml" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -177,6 +157,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -224,14 +205,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534930067422" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534930223412" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -259,7 +239,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1534926271763</updated>
-      <workItem from="1534926273583" duration="3482000" />
+      <workItem from="1534926273583" duration="4235000" />
+      <workItem from="1535102192168" duration="299000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1534928557615</created>
@@ -272,7 +253,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3482000" />
+    <option name="totallyTimeSpent" value="4534000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -286,7 +267,7 @@
       <window_info id="Learn" order="5" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info id="Favorites" order="7" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="8" visible="true" weight="0.16295707" />
+      <window_info active="true" content_ui="combo" id="Project" order="8" visible="true" weight="0.16414945" />
       <window_info id="Structure" order="9" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Spring" order="0" />
       <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.2217018" />
@@ -337,12 +318,8 @@
     <entry file="file://$PROJECT_DIR$/2016/01/16/程序员的幽默/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/2016/01/20/Restful风格的springMVC/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2016/04/07/shiro原理及其运行流程介绍/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/2016/01/20/Restful风格的springMVC/index.html" />
+    <entry file="file://$PROJECT_DIR$/2016/04/07/shiro原理及其运行流程介绍/index.html" />
     <entry file="file://$PROJECT_DIR$/about/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -431,10 +408,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2875">
           <caret line="115" column="27" selection-start-line="115" selection-start-column="27" selection-end-line="115" selection-end-column="27" />
-          <folding>
-            <element signature="n#style#0;n#svg#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#path#1;n#svg#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -444,46 +417,24 @@
     <entry file="file://$PROJECT_DIR$/page-sitemap.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/search.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sitemap.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="282" column="24" selection-start-line="282" selection-start-column="24" selection-end-line="282" selection-end-column="24" />
+        <state relative-caret-position="330">
+          <caret line="1111" column="34" lean-forward="true" selection-start-line="1111" selection-start-column="34" selection-end-line="1111" selection-end-column="34" />
           <folding>
             <element signature="n#style#0;n#svg#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#path#1;n#svg#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#84411#84418#0" expanded="true" />
-            <element signature="e#98910#98917#0" expanded="true" />
-            <element signature="e#107434#107441#0" expanded="true" />
-            <element signature="e#112470#112474#0" expanded="true" />
-            <element signature="e#112477#112481#0" expanded="true" />
-            <element signature="e#119381#119385#1" expanded="true" />
-            <element signature="e#119415#119419#0" expanded="true" />
-            <element signature="e#119419#119423#0" expanded="true" />
-            <element signature="e#119508#119512#0" expanded="true" />
-            <element signature="e#119604#119608#0" expanded="true" />
-            <element signature="e#119608#119612#0" expanded="true" />
-            <element signature="e#119691#119695#0" expanded="true" />
-            <element signature="e#120578#120583#0" expanded="true" />
-            <element signature="e#120583#120588#0" expanded="true" />
-            <element signature="e#120621#120626#0" expanded="true" />
-            <element signature="e#120626#120631#0" expanded="true" />
-            <element signature="e#120694#120699#0" expanded="true" />
-            <element signature="e#120699#120704#0" expanded="true" />
-            <element signature="e#120814#120819#0" expanded="true" />
-            <element signature="e#120819#120824#0" expanded="true" />
-            <element signature="e#130748#130754#0" expanded="true" />
-            <element signature="e#130760#130767#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/search.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
         </state>
       </provider>
     </entry>
