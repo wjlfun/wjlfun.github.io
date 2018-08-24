@@ -130,12 +130,66 @@
         });
         daovoice('update');
     </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#GoTop").mouseenter(
+                function(){
+                    $("#GoTop").css("color","#FFF");
+                    $("#GoTop").css("background-color","#F3D117");
+                    $("#GoTop").css("text-decoration","none");
+                }
+            );
+            $("#GoTop").mouseleave(
+                function(){
+                    $("#GoTop").css("color","#FFF");
+                    $("#GoTop").css("background-color","#F59E1D");
+                    $("#GoTop").css("text-decoration","none");
+                }
+            );
+        });
 
+        var sth;
+        function GoTopFunction(){
+            FourLeafCloverZCVar=setInterval(GoTopFunctionEachScrollBy,10);
+        }
+
+        function GoTopFunctionEachScrollBy(eachHeight){
+
+            //判断是否存在以下两个实例
+            if(document.documentElement && document.documentElement.scrollTop)
+            {
+                if(document.documentElement.scrollTop<=0){
+                    clearInterval(sth);
+                }else{
+                    window.scrollBy(0,-25);
+                }
+            }else{
+                if(document.body.scrollTop<=0){
+                    clearInterval(sth);
+                }else{
+                    window.scrollBy(0,-25);
+                }
+            }
+        }
+    </script>
     <title>www.wjlfun.info</title>
 
 
 </head>
-
+<style type="text/css">
+    　　#GoTop{
+        width:40px;
+        height:40px;
+        background-color:#F59E1D;
+        position:fixed;
+        bottom:30px;
+        right:30px;
+        font-size:19pt;
+        text-align:center;
+        color:#FFF;
+        text-decoration:none;
+    }
+</style>
 <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -1088,7 +1142,9 @@
                                     RSS
                                 </a>
                             </div>
-
+                            <div>
+                                　　<a id="GoTop" onclick="GoTopFunction()" href="javascript:void(0)">∧</a>
+                            </div>
 
                             <div class="links-of-author motion-element">
                 
